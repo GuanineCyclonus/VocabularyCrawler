@@ -12,7 +12,10 @@ pre_word = ''
 for word in words:
     counter += 1
     # print(word)
-    entry += word + ' '
+    if counter % 8 == 2:
+        entry += word.zfill(4) + ' '
+    else :
+        entry += word + ' '
     if counter % 8 == 0:
         entry += '\n'
         print(entry)
